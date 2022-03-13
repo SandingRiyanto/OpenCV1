@@ -21,6 +21,7 @@ while(True):
 
     hasil_kontur = cv2.drawContours(image, kontur, -1, (0,255,0), 2)
     cv2.imshow("hasil kontur", hasil_kontur)
+    cv2.imshow("Canny", tepi)
 
     interupsi = cv2.waitKey(10)
     if interupsi & 0xFF == 27:
