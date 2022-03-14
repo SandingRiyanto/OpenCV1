@@ -1,4 +1,4 @@
-import cv2
+from cv2 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
@@ -7,9 +7,10 @@ img = cv2.imread('shape_color.jpg')
 
 # converting image into grayscale image
 # gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+# gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+abu = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 # setting threshold of gray image
-_, threshold = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
+_, threshold = cv2.threshold(abu, 127, 255, cv2.THRESH_BINARY)
 
 # using a findContours() function
 contours, _ = cv2.findContours(
