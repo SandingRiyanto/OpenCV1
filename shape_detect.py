@@ -1,5 +1,6 @@
 from cv2 import cv2
 import numpy as np
+from decimal import Decimal, getcontext
 
 # rescale frame (bikin default 75)
 def rescale_frame(frame, percent=75):
