@@ -3,7 +3,7 @@ from cv2 import cv2
 from matplotlib import pyplot as plt
 
 # content
-img = cv2.imread('image/sanding.jpg', 0)
+img = cv2.imread('images/wayang.jpg', 0)
 plt.hist(img.ravel(), 256,[0,256])
 
 # display result
