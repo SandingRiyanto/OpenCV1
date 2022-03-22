@@ -2,14 +2,15 @@ from cv2 import cv2
 import numpy as np
 
 # rescale frame (bikin default 75)
-def rescale_frame(frame, percent=75):
+def rescale_frame(frame, percent=100):
     width   =int(frame.shape[1]*percent/100)
     height  =int(frame.shape[0]*percent/100)
     dim     =(width,height)
     return cv2.resize(frame, dim, interpolation=cv2.INTER_AREA)
 
 # aktifkan webcam
-cap = cv2.VideoCapture(0)
+# cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture('video\gatotkaca.mp4')
 while(True):
     _,frame = cap.read()
     image   = rescale_frame(frame, percent=100)
@@ -20,7 +21,7 @@ while(True):
     print("Jumlah: ", jumlah)
 
     hasil_kontur = cv2.drawContours(image, kontur, -1, (0,255,0), 2)
-    cv2.imshow("hasil kontur", hasil_kontur)
+    # cv2.imshow("hasil kontur", hasil_kontur)
     cv2.imshow("Canny", tepi)
 
     interupsi = cv2.waitKey(10)
