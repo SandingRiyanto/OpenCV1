@@ -5,7 +5,7 @@ from tkinter import ttk
 root = tk.Tk()
 root.geometry('300x200')
 root.resizable(False, False)
-root.title('Button Demo')
+root.title('Canny Edge Detection')
 
 # fungsi
 def edge_detect():
@@ -13,7 +13,7 @@ def edge_detect():
     import numpy as np
 
     # akuisisi citra
-    image = cv2.imread('images/wayang.jpg')
+    image = cv2.imread('images/wayang.jpg') # masih statis -> pakai open file dialog tkinter!
     abu     = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     tepi    = cv2.Canny(abu, 100, 200)
     kontur, hirarki = cv2.findContours(tepi, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
@@ -30,7 +30,7 @@ def edge_detect():
     cv2.destroyAllWindows()
 
 # exit button
-tampil_citra = ttk.Button(root, text='Tampil', command=edge_detect)
+tampil_citra = ttk.Button(root, text='Tampilkan', command=edge_detect)
 
 tampil_citra.pack(
     ipadx=5,
