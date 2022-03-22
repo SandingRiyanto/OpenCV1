@@ -2,7 +2,7 @@ from cv2 import cv2
 import numpy as np
 
 # akuisisi citra
-image = cv2.imread('images/bentuk.jpg')
+image = cv2.imread('images/wayang.jpg')
 abu     = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 tepi    = cv2.Canny(abu, 100, 200)
 kontur, hirarki = cv2.findContours(tepi, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
