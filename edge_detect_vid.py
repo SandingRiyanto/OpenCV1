@@ -10,7 +10,7 @@ def rescale_frame(frame, percent=100):
 
 # aktifkan webcam
 # cap = cv2.VideoCapture(0)
-cap = cv2.VideoCapture('video\gatotkaca.mp4')
+cap = cv2.VideoCapture('video/antareja.mp4')
 while(True):
     _,frame = cap.read()
     image   = rescale_frame(frame, percent=100)
