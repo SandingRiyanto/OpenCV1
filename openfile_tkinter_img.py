@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import filedialog
 import os
 import tkinter as tk
-from PIL import Image, ImageTk
+# from PIL import Image, ImageTk
 from cv2 import cv2
 import tkinter as tk
 from tkinter import ttk
