@@ -6,7 +6,7 @@ from tkinter import ttk
 
 # root window
 root = tk.Tk()
-root.geometry('300x200')
+root.geometry('200x200')
 root.resizable(False, False)
 root.title('Show Histogram of Image')
 
@@ -25,13 +25,14 @@ def tampil_citra():
     cv2.imshow('gambarnya', img)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
+    
 # button
 # tampil_citra = ttk.Button(root, text='Lihat Histogram', command=tampil_histogram)
 # tampil_citra = ttk.Button(root, text='Lihat Citra', command=tampil_citra)
-button1=ttk.Button(root, text="button1", command=tampil_citra)
+button1=ttk.Button(root, text="Show Image", command=tampil_citra)
 button1.grid(row=1,column=2)
 
-button2=ttk.Button(root, text="button2", command=tampil_histogram)
+button2=ttk.Button(root, text="Show Histogram", command=tampil_histogram)
 button2.grid(row=1,column=3)
 
 # button1.pack(ipadx=5, ipady=5, expand=True)
