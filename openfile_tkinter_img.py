@@ -14,7 +14,7 @@ root.title('Demo Aplikasi')
 
 # fungsi untuk load image file dan menampilkannya dengan lib openCV
 def tampil_img():
-    fileku = filedialog.askopenfilename(initialdir=os.getcwd(), title="Select file", filetypes=(("JPG file", "*.jpg"), ("PNG file", "*.png"), ("All files", "*.*")))
+    fileku = filedialog.askopenfilename(initialdir=os.getcwd(), title="Select file", filetypes=(("MP4 file", "*.mp4"), ("JPG file", "*.jpg"), ("PNG file", "*.png"), ("All files", "*.*")))
     # img = Image.open(fileku)
     img = cv2.imread(fileku)
     # DI SINI TINGGAL DIMASUKAN CODE UNTUK OLAH IMAGE/VIDEO -> DETEKSI TEPI ATAU YG LAINNYA
