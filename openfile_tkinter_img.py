@@ -13,22 +13,21 @@ root.geometry('300x200')
 root.resizable(False, False)
 root.title('Canny Edge Detection')
 
+# fungsi untuk load image file dan menampilkannya dengan lib openCV
 def tampil_img():
     fileku = filedialog.askopenfilename(initialdir=os.getcwd(), title="Select file", filetypes=(("JPG file", "*.jpg"), ("PNG file", "*.png"), ("All files", "*.*")))
     # img = Image.open(fileku)
     img = cv2.imread(fileku)
-    # cv2.imshow("tampil gambar", img)
-    # cv2.waitKey(0)
-    # cv2.destroyAllWindows()
-    
-    print(img)
+    # DI SINI TINGGAL DIMASUKAN CODE UNTUK OLAH IMAGE/VIDEO -> DETEKSI TEPI ATAU YG LAINNYA
+    cv2.imshow("gambar", img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
 
-tampil_citra = ttk.Button(root, text='Tampilkan', command=tampil_img)
+    # print(img)
 
-tampil_citra.pack(
-    ipadx=5,
-    ipady=5,
-    expand=True
-)
+# tombol untuk show path image
+tampil_citra = ttk.Button(root, text='Open Image File', command=tampil_img)
+
+tampil_citra.pack(ipadx=5, ipady=5, expand=True)
 
 root.mainloop()
