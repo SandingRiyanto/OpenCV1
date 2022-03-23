@@ -17,14 +17,19 @@ def tampil_histogram():
 
     # display result
     plt.show()
+
+def tampil_citra():
+    img = cv2.imread('images/wayang.jpg', 0)
+
+    # display result
     cv2.imshow('gambarnya', img)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
-
 # button
 tampil_citra = ttk.Button(root, text='Lihat Histogram', command=tampil_histogram)
-# tampil_citra = ttk.Button(root, text='Lihat Histogram', command=tampil_histogram)
+# tampil_citra = ttk.Button(root, text='Lihat Citra', command=tampil_citra)
 
 tampil_citra.pack(ipadx=5, ipady=5, expand=True)
 
 root.mainloop()
+# Note: COBA BUAT 2 TOMBOL: 1) TAMPIL GAMBAR , 2) TAMPIL HISTOGRAM
