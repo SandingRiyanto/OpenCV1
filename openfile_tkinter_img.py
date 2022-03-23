@@ -1,7 +1,6 @@
 from tkinter import *
 from tkinter import filedialog
 import os
-import tkinter as tk
 # from PIL import Image, ImageTk
 from cv2 import cv2
 import tkinter as tk
@@ -11,7 +10,7 @@ from tkinter import ttk
 root = tk.Tk()
 root.geometry('300x200')
 root.resizable(False, False)
-root.title('Canny Edge Detection')
+root.title('Demo Aplikasi')
 
 # fungsi untuk load image file dan menampilkannya dengan lib openCV
 def tampil_img():
