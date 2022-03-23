@@ -26,10 +26,16 @@ def tampil_citra():
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 # button
-tampil_citra = ttk.Button(root, text='Lihat Histogram', command=tampil_histogram)
+# tampil_citra = ttk.Button(root, text='Lihat Histogram', command=tampil_histogram)
 # tampil_citra = ttk.Button(root, text='Lihat Citra', command=tampil_citra)
+button1=ttk.Button(root, text="button1", command=tampil_citra)
+button1.grid(row=1,column=2)
 
-tampil_citra.pack(ipadx=5, ipady=5, expand=True)
+button2=ttk.Button(root, text="button2", command=tampil_histogram)
+button2.grid(row=1,column=3)
+
+# button1.pack(ipadx=5, ipady=5, expand=True)
+# button2.pack(ipadx=5, ipady=5, expand=True)
 
 root.mainloop()
 # Note: COBA BUAT 2 TOMBOL: 1) TAMPIL GAMBAR , 2) TAMPIL HISTOGRAM
