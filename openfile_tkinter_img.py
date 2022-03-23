@@ -15,10 +15,12 @@ root.title('Canny Edge Detection')
 
 def tampil_img():
     fileku = filedialog.askopenfilename(initialdir=os.getcwd(), title="Select file", filetypes=(("JPG file", "*.jpg"), ("PNG file", "*.png"), ("All files", "*.*")))
-    img = Image.open(fileku)
+    # img = Image.open(fileku)
+    img = cv2.imread(fileku)
     # cv2.imshow("tampil gambar", img)
     # cv2.waitKey(0)
     # cv2.destroyAllWindows()
+    
     print(img)
 
 tampil_citra = ttk.Button(root, text='Tampilkan', command=tampil_img)
