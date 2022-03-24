@@ -32,13 +32,12 @@ def face_detec_video():
         # Draw the rectangle around each face
         for (x, y, w, h) in faces:
             cv2.rectangle(img, (x, y), (x+w, y+h), (0, 255, 0), 2)
-
+            cv2.putText(img, "Status: {}".format("detected!"), (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0),1)
         # Display
         cv2.imshow('img', img)
 
         # Stop if escape key is pressed
-        k = cv2.waitKey(1) & 0xff
-        if k==27:
+        if cv2.waitKey(10) == 27:
             break
             
     # Release the VideoCapture object
