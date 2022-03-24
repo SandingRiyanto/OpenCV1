@@ -1,5 +1,5 @@
 import numpy as np
-import cv2
+from cv2 import cv2
 
 # diambil dari opencv github
 face_cascade = cv2.CascadeClassifier('opencv_xml/haarcascade_frontalface_default.xml')
