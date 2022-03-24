@@ -3,11 +3,12 @@ from cv2 import cv2
 from matplotlib import pyplot as plt
 import tkinter as tk
 from tkinter import ttk
+from tkinter import *
 
 # root window
 root = tk.Tk()
-root.geometry('200x200')
-root.resizable(False, False)
+root.geometry('400x300')
+# root.resizable(False, False)
 root.title('Show Histogram of Image')
 
 def tampil_histogram():
@@ -27,16 +28,9 @@ def tampil_citra():
     cv2.destroyAllWindows()
     
 # button
-# tampil_citra = ttk.Button(root, text='Lihat Histogram', command=tampil_histogram)
-# tampil_citra = ttk.Button(root, text='Lihat Citra', command=tampil_citra)
-button1=ttk.Button(root, text="Show Image", command=tampil_citra)
-button1.grid(row=1,column=2)
+button1=ttk.Button(root, text="Show Image", command=tampil_citra).place(x=100, y=100)
 
-button2=ttk.Button(root, text="Show Histogram", command=tampil_histogram)
-button2.grid(row=1,column=3)
-
-# button1.pack(ipadx=5, ipady=5, expand=True)
-# button2.pack(ipadx=5, ipady=5, expand=True)
+button2=ttk.Button(root, text="Show Histogram", command=tampil_histogram).place(x=200, y=100)
 
 root.mainloop()
 # Note: COBA BUAT 2 TOMBOL: 1) TAMPIL GAMBAR , 2) TAMPIL HISTOGRAM
