@@ -1,5 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
+from tkinter import filedialog
+import os
 
 # root window
 root = tk.Tk()
@@ -13,16 +15,18 @@ def edge_detect():
     import numpy as np
 
     # akuisisi citra
-    image = cv2.imread('images/wayang.jpg') # masih statis -> pakai open file dialog tkinter!
-    abu     = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    fileku = filedialog.askopenfilename(initialdir=os.getcwd(), title="Select file", filetypes=(("JPG file", "*.jpg"), ("PNG file", "*.png"), ("All files", "*.*")))
+    img = cv2.imread(fileku)
+    # img = cv2.imread('images/wayang.jpg') # masih statis -> pakai open file dialog tkinter!
+    abu     = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     tepi    = cv2.Canny(abu, 100, 200)
     kontur, hirarki = cv2.findContours(tepi, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
 
     # hitung objek citra
-    jumlah = str(len(kontur))
-    print("jumlah objek: ", jumlah)
+    # jumlah = str(len(kontur))
+    # print("jumlah objek: ", jumlah)
 
-    hasil_kontur = cv2.drawContours(image, kontur, -1, (0,255,0), 2) #format warna: Blu-Green-Red | ketebalan
+    hasil_kontur = cv2.drawContours(img, kontur, -1, (0,255,0), 2) #format warna: Blu-Green-Red | ketebalan
 
     # cv2.imshow("hasil kontur", hasil_kontur)
     cv2.imshow("Canny", tepi)
