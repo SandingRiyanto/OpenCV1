@@ -29,8 +29,7 @@ def tampil_citra():
     
 # button
 button1=ttk.Button(root, text="Show Image", command=tampil_citra).place(x=100, y=100)
-
 button2=ttk.Button(root, text="Show Histogram", command=tampil_histogram).place(x=200, y=100)
 
 root.mainloop()
-# Note: COBA BUAT 2 TOMBOL: 1) TAMPIL GAMBAR , 2) TAMPIL HISTOGRAM
+# Note: COBA BUAT 2 TOMBOL: 1) TAMPIL GAMBAR , 2) TAMPIL HISTOGRAM --> DONE!
