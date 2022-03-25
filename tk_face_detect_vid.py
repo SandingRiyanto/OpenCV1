@@ -37,11 +37,18 @@ def face_detec_video():
         cv2.imshow('img', img)
 
         # Stop if escape key is pressed
-        if cv2.waitKey(10) == 27:
+        # if cv2.waitKey(10) == 27:
+        #     break
+        if cv2.waitKey(10) & 0xFF == ord('q'):
+            cap.release()
+            cv2.destroyAllWindows()
             break
+            return
             
     # Release the VideoCapture object
+    
     cap.release()
+    cv2.destroyAllWindows()
 
 # tombol
 tombol = ttk.Button(root, text='Detect!', command=face_detec_video)
