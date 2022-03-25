@@ -17,12 +17,12 @@ def motion_detect():
     # core
     # capt = cv2.VideoCapture('video\car_walk.mp4')
     capt = filedialog.askopenfilename(initialdir=os.getcwd(), title="Select file", filetypes=(("MP4 file", "*.mp4"), ("AVI file", "*.avi"), ("All files", "*.*")))
-    # capt.release()
-    print(capt)
-    ret, frame1 = capt.read()
-    ret, frame2 = capt.read()
+    videoku = cv2.VideoCapture(f'{capt}')
+    
+    ret, frame1 = videoku.read()
+    ret, frame2 = videoku.read()
 
-    while capt.isOpened():
+    while videoku.isOpened():
         diff    = cv2.absdiff(frame1, frame2)
         gray    = cv2.cvtColor(diff, cv2.COLOR_BGR2GRAY)
         blur    = cv2.GaussianBlur(gray, (5,5), 0)
@@ -41,13 +41,13 @@ def motion_detect():
 
         cv2.imshow('feed', frame1)
         frame1 = frame2
-        ret, frame2 = capt.read()
+        ret, frame2 = videoku.read()
 
         if cv2.waitKey(10) == 27:
             break
 
     cv2.destroyAllWindows()
-    capt.release()
+    videoku.release()
 
 tombol1 = ttk.Button(root, text='Detect!', command=motion_detect)
 tombol1.pack(ipadx=5, ipady=5, expand=True)
