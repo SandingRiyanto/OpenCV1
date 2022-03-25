@@ -43,8 +43,11 @@ def motion_detect():
         frame1 = frame2
         ret, frame2 = videoku.read()
 
-        if cv2.waitKey(10) == 27:
+        if cv2.waitKey(40) & 0xFF == ord('q'):
+            videoku.release()
+            cv2.destroyAllWindows()
             break
+            return
 
     cv2.destroyAllWindows()
     videoku.release()
