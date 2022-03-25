@@ -9,8 +9,8 @@ def rescale_frame(frame, percent=100):
     return cv2.resize(frame, dim, interpolation=cv2.INTER_AREA)
 
 # aktifkan webcam
-# cap = cv2.VideoCapture(0)
-cap = cv2.VideoCapture('video/antareja.mp4')
+cap = cv2.VideoCapture(0)
+# cap = cv2.VideoCapture('video/antareja.mp4')
 while(True):
     _,frame = cap.read()
     image   = rescale_frame(frame, percent=100)
