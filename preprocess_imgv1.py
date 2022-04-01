@@ -23,10 +23,10 @@ def proses_img():
         gray = cv2.cvtColor(image_read, cv2.COLOR_BGR2GRAY)
         ret, biner = cv2.threshold(gray, 170, 255, cv2.THRESH_BINARY)
         
-        cv2.imshow('Color image', biner)
+        # cv2.imshow('Color image', biner)
         # writing the images in a folder output_images
         cv2.imwrite('images\simpan\gambar{}.png'.format(bb), biner)
-
+        print("loading....")
         k = cv2.waitKey(1000)
         cv2.destroyAllWindows()
 
