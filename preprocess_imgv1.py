@@ -9,7 +9,7 @@ import os
 
 # root window
 root = tk.Tk()
-root.geometry('300x200')
+root.geometry('300x300')
 root.resizable(False, False)
 root.title('Demo Aplikasi')
 
