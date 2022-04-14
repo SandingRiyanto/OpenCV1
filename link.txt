@@ -1,3 +1,4 @@
 https://github.com/opencv/opencv/tree/4.x/data/haarcascades
 https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_objdetect/py_face_detection/py_face_detection.html
 https://github.com/sanpreet/Write-Multiple-images-into-a-folder-using-python-cv2/blob/master/reading_writing_multiple_images_opencv2.py
+https://github.com/Ai-Genome-Saksham/OpenCV/blob/main/OpenCV/%2310%20Resize%20Multiple%20Images.py
