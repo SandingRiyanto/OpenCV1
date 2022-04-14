@@ -29,7 +29,7 @@ validation_generator = validation_data_gen.flow_from_directory(
 # create model structure
 model = Sequential()
 
-model.add(Conv2D(32, kernel_size=(3,3), activation='rellu', input_shape=(48,48,1)))
+model.add(Conv2D(32, kernel_size=(3,3), activation='rellu', input_shape=(48,48,1))) #index 1: image grayscale
 model.add(Conv2D(64, kernel_size=(3,3), activation='rellu'))
 model.add(MaxPooling2D(pool_size=(2,2)))
 model.add(Dropout(0.25))
