@@ -27,7 +27,7 @@ while True:
     if interrupt & 0xFF == 27:
         break
     if interrupt & 0xFF == ord('c'):
-        cv2.imwrite('image/saved.jpg', roi)
+        cv2.imwrite('saved.jpg', roi)
 
 capture.release()
 cv2.destroyAllWindows()

@@ -18,7 +18,8 @@ def tampil_img():
     # img = Image.open(fileku)
     img = cv2.imread(fileku)
     # DI SINI TINGGAL DIMASUKAN CODE UNTUK OLAH IMAGE/VIDEO -> DETEKSI TEPI ATAU YG LAINNYA
-    cv2.imshow("gambar", img)
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    cv2.imshow("gambar", gray)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 

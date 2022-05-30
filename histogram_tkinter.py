@@ -13,14 +13,14 @@ root.title('Show Histogram of Image')
 
 def tampil_histogram():
     # content
-    img = cv2.imread('images/wayang.jpg', 0)
+    img = cv2.imread('images/SR.jpg', 0)
     plt.hist(img.ravel(), 256,[0,256])
 
     # display result
     plt.show()
 
 def tampil_citra():
-    img = cv2.imread('images/wayang.jpg', 0)
+    img = cv2.imread('images/SR.jpg', 0)
 
     # display result
     cv2.imshow('gambarnya', img)
